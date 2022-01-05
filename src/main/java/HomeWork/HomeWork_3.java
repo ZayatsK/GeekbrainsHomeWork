@@ -60,6 +60,7 @@ arr [0][0] = 1;
             arr [3][3] = 1;
             arr [3][0] = 1;
             arr [2][1] = 1;
+
             arr [0][3] = 1;
             arr [1][2] = 1;
             for (int i = 0; i < arr.length; i++) {
