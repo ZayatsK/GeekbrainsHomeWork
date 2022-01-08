@@ -6,6 +6,7 @@ public class HomeWork_3 {
     public static void main(String[] args) {
 
 
+
         zad1();
         zad2();
         zad3();
@@ -51,24 +52,27 @@ public class HomeWork_3 {
         System.out.println();
         }
 
+
+
         public static void zad4() {
 
-        int [][] arr = new int [4][4];
-arr [0][0] = 1;
-            arr [1][1] = 1;
-            arr [2][2] = 1;
-            arr [3][3] = 1;
-            arr [3][0] = 1;
-            arr [2][1] = 1;
+        int counter = 0;
+        int[][] array = new int[5][5];
 
-            arr [0][3] = 1;
-            arr [1][2] = 1;
-            for (int i = 0; i < arr.length; i++) {
-                for (int j = 0; j < arr.length; j++) {
-                    System.out.print(arr[i][j] + " ");
-                }
+        for (int i = 0; i < array.length; i++) {
+            if (array[i][counter] == 0) {
+                array[i][counter] = 1;
+                counter += 1;
                 System.out.println();
+            };
+            for (int j = 0; j < array.length; j++) {
+                System.out.print(" " + array[i][j]);
             }
         }
-        public static int zad5(int a, int b)  // не успеваю доделать, пока заливаю на гит таком виде. Доделаю до вашей проверки, смотрите актуальную версию)
     }
+
+    //Задание 5 размышляю
+            }
+
+
+
