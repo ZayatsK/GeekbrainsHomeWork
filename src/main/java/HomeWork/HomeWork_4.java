@@ -1,5 +1,5 @@
 package HomeWork;
-//Копипаста для домашки. Пока в процессе.
+//Мой метод checkWIn2 на 134 строке.
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,9 +23,7 @@ public class HomeWork_4 {
     //рандом
     public static final Random RANDOM = new Random();
 
-    /**
-     * Проинициализироваать поле.
-     */
+
     public static void initMap() {
         map = new char[SIZE][SIZE];
         for (int i = 0; i < map.length; i++) {
@@ -36,9 +34,7 @@ public class HomeWork_4 {
         }
     }
 
-    /**
-     * Вывод игрового поля на экран.
-     */
+
     public static void printMap() {
         //нумеруем верхний ряд
         for (int i = 0; i <= map.length; i++) {
@@ -56,9 +52,7 @@ public class HomeWork_4 {
         }
     }
 
-    /**
-     * Ход человека.
-     */
+
     public static void humanTurn() {
         int x, y;
         do {
@@ -69,9 +63,7 @@ public class HomeWork_4 {
         map[y][x] = DOT_X;
     }
 
-    /**
-     * Ход робота.
-     */
+
     public static void aiTurn() {
         int x, y;
         do {
@@ -82,13 +74,7 @@ public class HomeWork_4 {
         map[y][x] = DOT_O;
     }
 
-    /**
-     * Проверка валидны ли значения поля
-     *
-     * @param x координата X
-     * @param y координата Y
-     * @return да/нет
-     */
+
     public static boolean isCellValid(int x, int y) {
         if (x < 0 || x >= SIZE || y < 0 || y >= SIZE) {
             return false;
@@ -99,12 +85,10 @@ public class HomeWork_4 {
         return true;
     }
 
-    /**
-     * Проверка победы.
-     * @param symbol Символ для которого проверяем. Крестик или нолик
-     * @return true, если выиграл
-     */
-    //здесь будет домашка! пока в процессе
+
+
+
+
     public static boolean checkWin(char symbol) {
         //строки
         if (map[0][0] == symbol && map[0][1] == symbol && map[0][2] == symbol) {
@@ -136,11 +120,7 @@ public class HomeWork_4 {
         return false;
     }
 
-    /**
-     * Проверка что в поле не осталось ни одной ссвободной ячейки.
-     *
-     * @return true, если нет ни одной свободной
-     */
+
     public static boolean isMapFull() {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
@@ -151,6 +131,31 @@ public class HomeWork_4 {
         }
         return true;
     }
+//HOME WORK. Question #2. В своем методе я попытался сделать счетчик, который считает до 3 символов.
+    // подскажите, где я повернул не там ))
+    public static boolean checkWin2 (char symbol) {
+
+        int counter=0;
+        for (int i = 0; i < map.length; i++) {
+            if (map[i][counter] == symbol) {
+                counter = counter + 1;
+            }
+            if (counter == 3) {
+                return true;
+            }
+            for (int j = 0; j < map.length; j++) {
+                if (map[j][counter] == symbol) {
+                    counter = counter + 1;
+                }
+                if (counter == 3) {
+                    return true;
+                }
+            }
+        }
+        return false;
+
+    }
+
 
     public static void main(String[] args) {
         initMap();
@@ -158,7 +163,7 @@ public class HomeWork_4 {
         while (true) {
             humanTurn();
             printMap();
-            if (checkWin(DOT_X)) {
+            if (checkWin2(DOT_X)) {
                 System.out.println("Побеждает человек");
                 break;
             }
@@ -168,7 +173,7 @@ public class HomeWork_4 {
             }
             aiTurn();
             printMap();
-            if (checkWin(DOT_O)) {
+            if (checkWin2(DOT_O)) {
                 System.out.println("Робот выиграл");
                 break;
             }
@@ -181,3 +186,4 @@ public class HomeWork_4 {
 
     }
 }
+
