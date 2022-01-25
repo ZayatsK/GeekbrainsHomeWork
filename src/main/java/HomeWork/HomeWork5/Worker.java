@@ -19,12 +19,12 @@ public class Worker {
         System.out.println("Возраст " + age);
 
     }
-    public Worker(String fullname_, String positon_, String email_, int phone_, int salary_, int age_) {
-        fullname = fullname_;
-        positon = positon_;
-        email = email_;
-        phone = phone_;
-        salary = salary_;
-        age = age_;
+    public Worker(String fullname, String positon, String email, int phone, int salary, int age) {
+        this.fullname = fullname;
+        this.positon = positon;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
     }
 }
