@@ -8,7 +8,9 @@ public class Test {
 
         Dog dog = new Dog("Шарик", 600, 10);
 
-
-
+dog.run("Шарик",0, 500);
+dog.swim ("Шарик", 0, 10);
+cat.run("Мурзик", 200, 200);
+cat.swim ("Мурзик", 0, 0);
     }
 }

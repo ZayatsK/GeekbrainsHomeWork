@@ -4,21 +4,25 @@ public class Animals {
     String name;
     int run;
     int swim;
+
     
     public Animals(String name, int run, int swim) {
         System.out.println("Это животное "+ name + " Дистнация бега = " + run + " Дистанция плавания =  " + swim);
         this.name = name;
         this.run = run;
         this.swim = swim;
+
     }
 
 
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
