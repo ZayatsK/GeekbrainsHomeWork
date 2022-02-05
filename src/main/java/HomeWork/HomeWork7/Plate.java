@@ -32,5 +32,11 @@ public class Plate {
 
     }
 
+    public void plusFood (int plus) {
+        this.food = this.food + plus;
+        System.out.println("После пополнения в тарелке лежит ");
+
+    }
+
 
 }

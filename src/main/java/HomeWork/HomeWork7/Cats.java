@@ -23,10 +23,7 @@ public class Cats {
             isSatiety = true;
             System.out.println("Кот покушал на " + hungry);
         }
-            //if (p.getFood() <= hungry) {
-              //  isSatiety = false;
-             //   System.out.println(" Нехватает еды в тарелке покушать " );
-           // }
+
             else if (this.isSatiety == true) {
                 System.out.println("Кот сыт ");
             } else {
