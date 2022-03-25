@@ -16,6 +16,7 @@ public class HomeWorkApp {
         System.out.println("Banana");
         System.out.println("Apple");
     }
+
     public static void checkSumSign() {     // создаю метод для двух переменных
         int a = -30; // объявил первую переменную и присвоил ей число 10
         int b = 5; // объявил вторую переменную и присвоил ей число 20
