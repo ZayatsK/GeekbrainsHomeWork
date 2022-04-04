@@ -2,7 +2,7 @@ package course2.HomeWork;
 import java.util.Random;
 public class Homework1 {
 
-    //4 задание делал не сам естественно, но было интересно разобраться
+    // 4 задание делал не сам естественно, но было интересно разобраться
     public static void main(String[] args) {
 
         Random rand = new Random();
